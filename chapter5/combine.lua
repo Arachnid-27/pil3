@@ -1,6 +1,6 @@
 --[ exercise 5.4 ]--
 
-function combin (arr, n, i, s, rs)
+function combine (arr, n, i, s, rs)
     n = n or #arr
     s = s or 1
     rs = rs or {}
@@ -20,4 +20,4 @@ function combin (arr, n, i, s, rs)
     end
 end
 
-combin({'a', 'b', 'c', 'd', 'e'}, 3)
+combine({'a', 'b', 'c', 'd', 'e'}, 3)
