@@ -16,7 +16,7 @@ function combine (arr, n, i, s, rs)
 
     for i = i or 1, #arr - n + 1 do
         rs[s] = arr[i]
-        combin(arr, n - 1, i + 1, s + 1, rs)
+        combine(arr, n - 1, i + 1, s + 1, rs)
     end
 end
 
