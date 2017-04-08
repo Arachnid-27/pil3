@@ -1,4 +1,4 @@
---[ exercise 12.2 ]--
+--[ exercise 12.4 ]--
 
 function serialize (o)
     t = type(o)
@@ -9,10 +9,14 @@ function serialize (o)
     elseif t == 'table' then
         io.write('{\n')
         for k, v in pairs(o) do
-            io.write('  [')
-            serialize(k)
-            io.write('] = ')
-            serialize(v)
+            if (type(k) == 'number') then
+                io.write('  ', v)
+            else
+                io.write('  [')
+                serialize(k)
+                io.write('] = ')
+                serialize(v)
+            end
             io.write(',\n')
         end
         io.write('}\n')
@@ -21,4 +25,4 @@ function serialize (o)
     end
 end
 
-serialize{a=12, b='lua', key='another "one"'}
+serialize{a=12, b='lua', key='another "one"', 14, 15, 16}
