@@ -24,4 +24,3 @@ end
 s1 = Set.new{}
 s2 = Set.new{10, 20, 30}
 print(#s1, #s2)
-
