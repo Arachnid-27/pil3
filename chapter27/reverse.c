@@ -44,5 +44,3 @@ int main(int argc, char* argv[]) {
     lua_close(L);
     exit(EXIT_SUCCESS);
 }
-
-
